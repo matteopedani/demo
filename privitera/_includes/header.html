@@ -1,0 +1,44 @@
+<header>
+  {%- assign default_paths = site.pages | map: "path" -%}
+  {%- assign page_paths = site.bootstrap.header_pages | default: default_paths -%}
+  {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      {%- if titles_size > 0 -%}
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          {%- for path in page_paths -%}
+          {%- assign my_page = site.pages | where: "path", path | first -%}
+          {%- if my_page.title -%}
+          <li class="nav-item">
+            <a class="nav-link {% if page.url == my_page.url %} active" aria-current="page{%- endif -%}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+          </li>
+          {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endif -%}
+    </div>
+  </nav>
+</header>
+ <!-- Start your project here-->
+
+ <div id="preview" class="preview"><div style="display: none;"></div><div><div style="position: relative;" data-draggable="true" class="" draggable="false"><!----><!----><section draggable="false" class="overflow-hidden pt-0" data-v-271253ee=""><section class="" style="padding-bottom: 1px;"> 
+  <!-- Navbar --> <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-2"> 
+    
+    <!-- Container wrapper --> <div class="container-fluid"> <div class="d-flex"> <!-- Toggle button --> <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i> </button> <!-- Navbar brand --> <a class="navbar-brand ms-3" draggable="false"> <i class="fas fa-gem text-primary" aria-controls="#picker-editor"></i> </a> </div> 
+    
+    <!-- Collapsible wrapper --> <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+      
+      <!-- Left links --> <ul class="navbar-nav me-auto mb-2 ms-2 ps-1 ms-lg-0 ps-lg-0 mb-lg-0"> <li class="nav-item"> <a class="nav-link" href="" aria-controls="#picker-editor" draggable="false">su ordinazione</a> </li> <li class="nav-item"> <a class="nav-link" href="" aria-controls="#picker-editor" draggable="false">orecchini</a> </li> <li class="nav-item"> <a class="nav-link" href="" aria-controls="#picker-editor" draggable="false">anelli</a> </li> </ul> 
+      <!-- Left links --> </div> <!-- Collapsible wrapper --> 
+      
+      <!-- Right elements --> <div class="d-flex align-items-center"> <button type="button" class="btn btn-link px-3 mb-1 me-2" aria-controls="#picker-editor" style="min-width: auto;">carrello</button> <button type="button" class="btn   btn-primary mb-1 me-lg-3" aria-controls="#picker-editor">Sign up</button> </div> 
+      <!-- Right elements --> </div> 
+  
+  <!-- Container wrapper --> </nav>
+  
