@@ -2,3 +2,4 @@ _site
 _posts_in_lavorazione
 .sass-cache
 .jekyll-metadata
+.Rproj.user
